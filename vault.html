@@ -20,18 +20,52 @@
         </nav>
     </header>
     <main class="container d-flex flex-column justify-content-center align-items-center">
-        <section class="hero liquid-glass px-5 py-4 mb-5">
+        <section class="text-center">
             <h1>MY VAULT</h1>
             <p>View and manage all your saved entries.</p>
         </section>
 
-        <section class="all-entries liquid-glass px-5 py-4">
-            <h2>ALL ENTRIES</h2>
+        <section class="vault-controls container d-flex flex-row justify-content-center gap-5 mb-5">
+            <input
+                type="search"
+                id="search-entries"
+                placeholder="Search entry titles"
+                class="liquid-glass p-1"
+            >
 
-            <ul class="list-unstyled">
-                <li>ENTRY 1</li>
-                <li>ENTRY 2</li>
-                <li>ENTRY 3</li>
+            <select id="sort-entries" class="liquid-glass">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="title">Title A-Z</option>
+            </select>
+
+            <p class="liquid-glass p-2"><span id="entry-count">0</span> entries</p>
+        </section>
+
+        <section class="all-entries liquid-glass px-5 py-4 mb-5">
+            <h2 class="text-center mb-4">ALL ENTRIES</h2>
+
+            <ul class="list-unstyled container d-flex flex-column justify-content-center align-items-center gap-3">
+                <li class="liquid-glass px-4 py-3 container d-flex flex-column justify-content-center align-items-center gap-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, itaque ipsa! Dolorem, possimus voluptate. Voluptas itaque delectus laboriosam doloribus laborum id officia, atque vitae, temporibus corporis, non placeat? Error, earum.
+                    <div class="entry-buttons container d-flex flex-row justify-content-center gap-5"><button class="glass-button" type="button">EDIT</button><button class="glass-button glass-button-danger" type="button">DELETE</button></div>
+                </li>
+                <li class="liquid-glass px-4 py-3 container d-flex flex-column justify-content-center align-items-center gap-3">
+                    Autem ea expedita rem laborum voluptate quod neque perferendis similique, accusamus excepturi temporibus illo accusantium doloribus. Eaque aperiam voluptas sequi unde quia blanditiis, corrupti nisi repellat! Tempore aut dolorum laborum?
+                    <div class="entry-buttons container d-flex flex-row justify-content-center gap-5"><button class="glass-button" type="button">EDIT</button><button class="glass-button glass-button-danger" type="button">DELETE</button></div>
+                </li>
+                <li class="liquid-glass px-4 py-3 container d-flex flex-column justify-content-center align-items-center gap-3">
+                    Numquam, voluptates officiis? Ratione corporis a voluptas temporibus quas unde, quis maxime libero ab asperiores repudiandae, nemo excepturi laboriosam ea deleniti iste suscipit tempora. Esse praesentium velit sunt et doloremque!
+                    <div class="entry-buttons container d-flex flex-row justify-content-center gap-5"><button class="glass-button" type="button">EDIT</button><button class="glass-button glass-button-danger" type="button">DELETE</button></div>
+                </li>
+                <li class="liquid-glass px-4 py-3 container d-flex flex-column justify-content-center align-items-center gap-3">
+                    Illum sint corrupti delectus at quibusdam velit ullam, sunt quaerat soluta deserunt ducimus sit molestiae ad, iusto nam eius consequatur, sequi enim eveniet neque magni illo? Incidunt distinctio esse corporis.
+                    <div class="entry-buttons container d-flex flex-row justify-content-center gap-5"><button class="glass-button" type="button">EDIT</button><button class="glass-button glass-button-danger" type="button">DELETE</button></div>
+                </li>
+                <li class="liquid-glass px-4 py-3 container d-flex flex-column justify-content-center align-items-center gap-3">
+                    Ab alias maxime laborum fuga, ullam animi, eveniet quasi possimus facere dolor ad tenetur reiciendis praesentium! Est voluptatum alias at enim dolorem repudiandae reiciendis debitis esse dolore, dolores id neque!
+                    <div class="entry-buttons container d-flex flex-row justify-content-center gap-5"><button class="glass-button" type="button">EDIT</button><button class="glass-button glass-button-danger" type="button">DELETE</button></div>
+                </li>
             </ul>
         </section>
     </main>
