@@ -18,9 +18,9 @@ body{
     }
 }
 
-.nav-list li:focus-visible,
+.nav-list a:focus-visible,
 .glass-button:focus-visible {
-    outline: 2px solid #ffffff;     
+    outline: 2px solid #ffffff;
     outline-offset: 3px;
 }
 
@@ -37,7 +37,8 @@ body{
         0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-#search-entries input::placeholder{
+#search-entries::placeholder{
+    padding: 5px;
     color: black;
 }
 
@@ -86,4 +87,36 @@ body{
         0 8px 20px rgba(0, 0, 0, 0.18);
 
     color: rgba(255, 70, 90, 0.9);
+}
+
+.entry-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.entry-input:focus {
+    background: rgba(255, 255, 255, 0.12);
+
+    border-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.08),
+        inset 0 0 8px rgba(255, 255, 255, 0.12);
+}
+
+[hidden]{
+    display: none !important;
 }

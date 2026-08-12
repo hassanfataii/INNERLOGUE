@@ -14,22 +14,37 @@
             <a class="text-decoration-none" href="index.html">INNERLOGUE</a>
         </nav>
     </header>
-    <main class="container d-flex flex-column justify-content-center align-items-center">
-        <article class="liquid-glass px-5 py-5">
+    <main class="container d-flex flex-column justify-content-center align-items-center p-5">
+        <article id="entry-view" class="liquid-glass px-5 py-5">
             <header class="text-center">
-                <h1>ENTRY TITLE</h1>
-                <p class="fs-5">ENTRY DATE</p>
+                <h1 id="entry-title">ENTRY TITLE</h1>
+                <p id="entry-date" class="fs-5">ENTRY DATE</p>
             </header>
 
             <div class="mb-5 text-center">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae corporis repudiandae commodi odio ea at quod facere neque iusto ipsum tempore ducimus deleniti, quo quisquam voluptate. Non provident fuga fugiat.</p>
+                <p id="entry-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae corporis repudiandae commodi odio ea at quod facere neque iusto ipsum tempore ducimus deleniti, quo quisquam voluptate. Non provident fuga fugiat.</p>
             </div>
-            <footer class="container d-flex flex-column gap-2 align-items-center">
+            <footer class="text-center ">
                 <a class="liquid-glass px-1 py-1 text-decoration-none" href="vault.html">BACK TO VAULT</a>
-                <button class="liquid-glass px-1 py-1" type="button">EDIT</button>
-                <button class="liquid-glass px-1 py-1" type="button">DELETE</button>
+                <button id="edit-entry" class="glass-button px-1 py-1" type="button">EDIT</button>
+                <button id="delete-entry" class="glass-button glass-button-danger px-1 py-1" type="button">DELETE</button>
             </footer>
         </article>
+
+        <form id="edit-form" class="liquid-glass p-5 container d-flex flex-column align-items-center" hidden>
+            <div class="container d-flex flex-column text-center">
+                <label for="edit-title">Title</label>
+                <input type="text" id="edit-title" name="edit-title" class="entry-input" required>
+            </div>
+
+            <div class="container d-flex flex-column text-center mb-4">
+                <label for="edit-body">Reflection</label>
+                <textarea id="edit-body" name="edit-body" rows="10" class="entry-input" required></textarea>
+            </div>
+
+            <button type="submit" class="glass-button mb-3" id="save-changes">SAVE CHANGES</button>
+            <button type="button" id="cancel-edit" class="glass-button glass-button-danger">CANCEL</button>
+        </form>
     </main>
 </body>
 </html>
