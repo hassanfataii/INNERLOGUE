@@ -120,3 +120,86 @@ body{
 [hidden]{
     display: none !important;
 }
+
+@media (max-width: 1050px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .vault-controls {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1rem !important;
+    }
+
+    .all-entries,
+    .recent-entries,
+    #entry-view,
+    #entry-form,
+    #edit-form {
+        width: 100%;
+    }
+
+    .entry-buttons {
+        gap: 1rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .navbar > a {
+        font-size: 1.75rem !important;
+    }
+
+    .nav-list {
+        width: 100%;
+        gap: 0.75rem !important;
+        padding: 0.75rem !important;
+    }
+
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero,
+    .recent-entries,
+    .all-entries,
+    #entry-view,
+    #entry-form,
+    #edit-form {
+        padding: 1.25rem !important;
+    }
+
+    .vault-controls {
+        width: 100%;
+    }
+
+    #search-entries,
+    #sort-entries {
+        width: 100%;
+    }
+
+    .entry-buttons {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .entry-buttons button {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
