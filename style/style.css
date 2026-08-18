@@ -117,6 +117,11 @@ body{
         inset 0 0 8px rgba(255, 255, 255, 0.12);
 }
 
+.recent-entry-card {
+    width: 100%;
+    min-height: 100px;
+}
+
 [hidden]{
     display: none !important;
 }
