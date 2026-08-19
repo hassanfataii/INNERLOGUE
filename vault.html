@@ -28,7 +28,9 @@
         <section class="vault-controls container d-flex flex-row justify-content-center gap-5 mb-5">
             <input type="search" id="search-entries" placeholder="Search entry titles" class="liquid-glass p-2">
 
+            <label for="sort-entries" class="visually-hidden">Sort entries</label>
             <select id="sort-entries" class="liquid-glass">
+                <option value="" selected disabled>Sort by</option>
                 <option value="newest">Newest first</option>
                 <option value="oldest">Oldest first</option>
                 <option value="title">Title A-Z</option>
@@ -40,7 +42,7 @@
         <section class="all-entries liquid-glass px-5 py-4 mb-5">
             <h2 class="text-center mb-4">ALL ENTRIES</h2>
 
-            <ul class="list-unstyled container d-flex flex-column justify-content-center align-items-center gap-3">
+            <ul id="vault-entry-list" class="list-unstyled container d-flex flex-column justify-content-center align-items-center gap-3">
                 <li class="liquid-glass px-4 py-3 container d-flex flex-column justify-content-center align-items-center gap-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, itaque ipsa! Dolorem, possimus voluptate. Voluptas itaque delectus laboriosam doloribus laborum id officia, atque vitae, temporibus corporis, non placeat? Error, earum.
                     <div class="entry-buttons container d-flex flex-row justify-content-center gap-5"><button class="glass-button" type="button">EDIT</button><button class="glass-button glass-button-danger" type="button">DELETE</button></div>
@@ -64,5 +66,6 @@
             </ul>
         </section>
     </main>
+    <script src="js/vault.js"></script>
 </body>
 </html>
