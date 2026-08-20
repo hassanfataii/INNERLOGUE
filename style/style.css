@@ -228,6 +228,10 @@ body{
     .entry-buttons {
         gap: 1rem !important;
     }
+
+    .entry-title-link::after {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
