@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <p id="form-message" class="save-message liquid-glass" hidden></p>
     <header class="container d-flex flex-column justify-content-center align-items-center mb-5 fs-1">
         <nav aria-label="Header navigation bar">
-            <a class="text-decoration-none" href="index.html">INNERLOGUE</a>
+            <a class="text-decoration-none entry-title-link" href="index.html">INNERLOGUE</a>
         </nav>
     </header>
     <main class="container d-flex flex-column justify-content-center align-items-center p-5">
         <article id="entry-view" class="liquid-glass px-5 py-5">
             <header class="text-center">
-                <h1 id="entry-title">ENTRY TITLE</h1>
-                <p id="entry-date" class="fs-5">ENTRY DATE</p>
+                <h1 id="entry-title"></h1>
+                <p id="entry-date" class="fs-5"></p>
             </header>
 
             <div class="mb-5 text-center">
-                <p id="entry-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae corporis repudiandae commodi odio ea at quod facere neque iusto ipsum tempore ducimus deleniti, quo quisquam voluptate. Non provident fuga fugiat.</p>
+                <p id="entry-content"></p>
             </div>
             <footer class="text-center ">
                 <a class="liquid-glass px-2 py-2 text-decoration-none" href="vault.html">BACK TO VAULT</a>
@@ -45,6 +46,6 @@
             <button type="button" id="cancel-edit" class="glass-button glass-button-danger">CANCEL</button>
         </form>
     </main>
-    <script src="js/entry.js"></script>
+    <script type="module" src="js/entry.js"></script>
 </body>
 </html>

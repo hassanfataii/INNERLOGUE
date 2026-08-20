@@ -11,24 +11,24 @@
 <body>
     <header>
         <nav class="navbar d-flex justify-content-between align-items-center px-4 py-3" aria-label="Header navigation bar">
-            <a class="text-decoration-none fs-1" href="index.html">INNERLOGUE</a>
+            <a class="text-decoration-none fs-1 entry-title-link" href="index.html">INNERLOGUE</a>
             <ul class="nav-list liquid-glass d-flex align-items-center gap-4 px-4 py-2 list-unstyled">
                 <li><a class="text-decoration-none liquid-glass px-3 py-1" href="index.html">HOME</a></li>
-                <li><a class="text-decoration-none" href="new-entry.html">NEW ENTRY</a></li>
-                <li><a class="text-decoration-none" href="vault.html">MY VAULT</a></li>
+                <li><a class="text-decoration-none entry-title-link" href="new-entry.html">NEW ENTRY</a></li>
+                <li><a class="text-decoration-none entry-title-link" href="vault.html">MY VAULT</a></li>
             </ul>
         </nav>
     </header>
     <main class="container d-flex flex-column justify-content-center align-items-center">
-        <section class="hero liquid-glass px-4 py-3 mb-5">
+        <section id="hero" class="hero liquid-glass px-4 py-3 mb-5 text-center" hidden>
             <h1>WELCOME TO INNERLOGUE</h1>
             <p>A safe digital space to write down your thoughts.</p> 
         </section>
-        <section class="recent-entries liquid-glass px-4 py-3 mb-5">
+        <section id="recent-entries" class="recent-entries liquid-glass px-4 py-3 mb-5" hidden>
             <h2 class="text-center">RECENT ENTRIES</h2>
             <ul id="recent-entries-list" class="list-unstyled container d-flex flex-column justify-content-center align-items-center gap-3"></ul>
         </section> 
     </main>
-    <script src="js/home.js"></script>
+    <script type="module" src="js/home.js"></script>
 </body>
 </html>

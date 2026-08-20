@@ -124,6 +124,7 @@ body{
 
 .entry-title-link {
     position: relative;
+    display: inline-block;
 }
 
 .entry-title-link::after {
@@ -131,12 +132,67 @@ body{
     position: absolute;
     left: 0;
     width: 0;
+    bottom: 0;
     height: 2px;
     background: currentColor;
     transition: width .3s ease;
 }
 
 .entry-title-link:hover::after {
+    width: 100%;
+}
+
+.save-message {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: .75rem 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.save-message.show {
+    animation: save-message-animation 2s ease forwards;
+}
+
+.save-message-success {
+    color: rgba(107,255,87,.95);
+}
+
+.save-message-error {
+    color: rgba(255,70,90,.95);
+}
+
+@keyframes save-message-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+}
+
+.entry-preview {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
     width: 100%;
 }
 

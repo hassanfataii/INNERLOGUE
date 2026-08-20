@@ -1,3 +1,5 @@
+import { formatDate, showMessage } from "./utils.js";
+
 const params = new URLSearchParams(window.location.search);
 
 const entryId = params.get("id");
@@ -17,14 +19,7 @@ const editTitle = document.getElementById("edit-title");
 const editBody = document.getElementById("edit-body");
 const editButton = document.getElementById("edit-entry");
 const cancelEditButton = document.getElementById("cancel-edit");
-
-function formatDate(date) {
-    return date.toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    });
-}
+const formMessage = document.getElementById("form-message");
 
 function showViewMode() {
     entryView.hidden = false;
@@ -67,8 +62,16 @@ if (selectedEntry) {
     editForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        selectedEntry.title = editTitle.value;
-        selectedEntry.body = editBody.value;
+        const updatedTitle = editTitle.value.trim();
+        const updatedBody = editBody.value.trim();
+
+        if (!updatedTitle || !updatedBody) {
+            showMessage(formMessage, "Please fill in both the title and reflection.", "error");
+            return;
+        }
+
+        selectedEntry.title = updatedTitle;
+        selectedEntry.body = updatedBody;
 
         localStorage.setItem("entries", JSON.stringify(entries));
 
@@ -76,5 +79,7 @@ if (selectedEntry) {
         entryContent.textContent = selectedEntry.body;
 
         showViewMode();
+
+        showMessage(formMessage, "Edited successfully.", "success");
     });
 }

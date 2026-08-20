@@ -1,3 +1,4 @@
+import {formatDate} from "./utils.js";
 const vaultEntryList = document.getElementById("vault-entry-list");
 const entryCount = document.getElementById("entry-count");
 const searchInput = document.getElementById("search-entries");
@@ -5,16 +6,24 @@ const sortSelect = document.getElementById("sort-entries");
 
 let entries = JSON.parse(localStorage.getItem("entries")) || [];
 
-function formatDate(date) {
-    return date.toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    });
-}
-
 function renderEntries(entriesToRender) {
     vaultEntryList.innerHTML = "";
+
+    if (entriesToRender.length === 0) {
+        const emptyMessage = document.createElement("p");
+
+        if (entries.length === 0) {
+            emptyMessage.textContent = "No entries yet. Write your first reflection.";
+        } else {
+            emptyMessage.textContent = "No matching entries found.";
+        }
+
+        emptyMessage.classList.add("text-center","opacity-75","mb-0");
+
+        vaultEntryList.appendChild(emptyMessage);
+
+        return;
+    }
 
     entriesToRender.forEach((entry) => {
         const li = document.createElement("li");
@@ -33,6 +42,7 @@ function renderEntries(entriesToRender) {
         buttonContainer.classList.add("entry-buttons","d-flex","flex-row","justify-content-center","gap-5");
         editButton.classList.add("glass-button");
         deleteButton.classList.add("glass-button","glass-button-danger");
+        entryBody.classList.add("entry-preview")
 
         entryTitle.textContent = entry.title;
         entryBody.textContent = entry.body;
