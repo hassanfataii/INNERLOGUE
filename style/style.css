@@ -1,8 +1,9 @@
 body{
-    background: linear-gradient(120deg,
+    /* background: linear-gradient(120deg,
             rgba(63, 34, 59, 0.88),
             rgba(43, 48, 78, 0.88),
-            rgba(22, 26, 35, 0.92));
+            rgba(22, 26, 35, 0.92)); */
+    background: linear-gradient(to right, #f8b2be, #f44e4e, #ef12ef, #5252e0);
     background-size: 200% 100%;
     animation: move-gradient 30s ease-in-out infinite alternate ;
     min-height: 100vh;
